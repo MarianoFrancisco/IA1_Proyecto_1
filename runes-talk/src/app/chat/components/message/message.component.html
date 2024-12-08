@@ -1,0 +1,10 @@
+<div class="flex flex-wrap" [ngClass]="{ 
+    'justify-content-end' : message.isOutgoing, 
+    'justify-content-start' : !message.isOutgoing
+}">
+    <div [ngClass]="{ 'surface-100 fadein animation-duration-2000' : message.isOutgoing }"
+        class="message-container"
+    >
+        <p class="m-0">{{ displayText }}</p>
+    </div>
+</div>
