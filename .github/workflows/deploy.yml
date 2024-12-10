@@ -23,7 +23,7 @@ jobs:
 
     - name: Build Angular app
       working-directory: runes-talk
-      run: npm run build -- --prod --output-path=../runes-talk --base-href "/IA1_Proyecto_1/"
+      run: npm run build -- --configuration production --output-path=../runes-talk --base-href "/IA1_Proyecto_1/"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
