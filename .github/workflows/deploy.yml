@@ -15,13 +15,15 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: 18
+        node-version: 22.3.0
 
     - name: Install dependencies
+      working-directory: runes-talk
       run: npm install
 
     - name: Build Angular app
-      run: npm run build -- --prod --output-path=runes-talk --base-href "/IA1_Proyecto_1/"
+      working-directory: runes-talk
+      run: npm run build -- --prod --output-path=../runes-talk --base-href "/IA1_Proyecto_1/"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
