@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages
+name: Deploy Angular App to GitHub Pages
 
 on:
   push:
@@ -12,12 +12,16 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Build and deploy
-      run: |
-        mkdir output
-        cp -R runes-talk/* output/
-        mv output/* .
-        rm -r output
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build Angular app
+      run: npm run build -- --prod --output-path=runes-talk --base-href "/IA1_Proyecto_1/"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
