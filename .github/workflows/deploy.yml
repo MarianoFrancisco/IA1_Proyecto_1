@@ -23,10 +23,10 @@ jobs:
 
     - name: Build Angular app
       working-directory: runes-talk
-      run: npm run build -- --configuration production --output-path=../dist --base-href "/IA1_Proyecto_1/"
+      run: npm run build production --output-path=../dist --base-href "/IA1_Proyecto_1/"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: dist
+        publish_dir: dist/browser
