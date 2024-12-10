@@ -1,0 +1,23 @@
+<form class="fadeinup animation-duration-1000 flex justify-content-center align-items-center"
+    [formGroup]="chatForm"
+    (ngSubmit)="sendMessage()"
+>
+    <textarea pInputTextarea
+        rows="2"
+        autoResize="true"
+        style="max-height: 75px;"
+        class="w-full md:w-5 mx-2"
+        formControlName="inputText"
+        placeholder="Escribe tu pregunta..."
+    ></textarea>
+    <p-button
+        [disabled]="isLoading()"
+        [ngClass]="{ 'pi-spin' : isLoading() }"
+        [pTooltip]="isLoading() ? 'Espera...' : 'Enviar'"
+        [severity]="isLoading() ? 'primary' : 'success'"
+        [icon]="isLoading() ? 'pi pi-spinner' : 'pi pi-send'"
+        type="submit"
+        rounded="true"
+        tooltipPosition="right"
+    />
+</form>
