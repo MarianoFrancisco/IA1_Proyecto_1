@@ -1,10 +1,10 @@
+
 name: Deploy runes talk
 
 on:
   push:
     branches:
-      - development
-      - feature/deploy
+      - main
 
 jobs:
   deploy:
