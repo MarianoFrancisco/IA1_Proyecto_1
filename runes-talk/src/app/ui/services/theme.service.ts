@@ -5,7 +5,7 @@ import { computed, Injectable, signal } from '@angular/core';
 })
 export class ThemeService {
 
-  private _isDarkTheme = signal<boolean>(false);
+  private _isDarkTheme = signal<boolean>(true);
 
   public themeLink?: HTMLLinkElement; 
   public isDarkTheme = computed(() => this._isDarkTheme());
