@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - development
+      - feature/deploy
 
 jobs:
   deploy:
@@ -23,7 +24,7 @@ jobs:
 
     - name: Build Angular app
       working-directory: runes-talk
-      run: npm run build production --output-path=../dist --base-href "/IA1_Proyecto_1/"
+      run: npm run build -- --configuration production --output-path=../dist --base-href "/IA1_Proyecto_1/"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
