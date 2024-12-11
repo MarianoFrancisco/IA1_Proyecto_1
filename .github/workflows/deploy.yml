@@ -1,0 +1,33 @@
+
+name: Deploy runes talk
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 22.3.0
+
+    - name: Install dependencies
+      working-directory: runes-talk
+      run: npm install
+
+    - name: Build Angular app
+      working-directory: runes-talk
+      run: npm run build -- --configuration production --output-path=../dist --base-href "/IA1_Proyecto_1/"
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: dist/browser

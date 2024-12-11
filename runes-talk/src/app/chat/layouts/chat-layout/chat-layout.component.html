@@ -1,0 +1,18 @@
+<div class="flex flex-column h-full">
+    @if (trained()) {
+        <div class="my-3 md:px-7 px-2 h-full overflow-y-auto flex flex-column">
+            @for (message of messageArray(); track $index) {
+                <chat-message [message]="message" />
+            }
+        </div>
+        <div class="mt-auto">
+            <chat-input-message/>
+        </div>
+    } @else {
+        <div class="flex justify-content-center align-items-center h-full">
+            <p-progressSpinner
+                strokeWidth="5" 
+            />
+        </div>
+    }
+</div>
