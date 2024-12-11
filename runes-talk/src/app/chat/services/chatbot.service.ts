@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as tf from '@tensorflow/tfjs';
 import { lastValueFrom } from 'rxjs';
@@ -10,9 +10,10 @@ export class ChatbotService {
 
   private model!: tf.Sequential;
   private vocab: string[] = [];
-  private trained: boolean = false;
+  private trained = signal<boolean>(false);
   private intenciones: string[] = [];
   private responsesMap: { [key: string]: string } = {};
+  public entrenado = computed(() => this.trained());
 
   constructor(private http: HttpClient) { }
 
@@ -48,7 +49,7 @@ export class ChatbotService {
   }
 
   async trainModel() {
-    if (this.trained) return;
+    if (this.trained()) return;
 
     const train = await this.loadData();
     if (!train || train.length === 0) {
@@ -78,11 +79,11 @@ export class ChatbotService {
       shuffle: true,
       verbose: 0
     });
-    this.trained = true;
+    this.trained.set(true);
   }
 
   predecirIntencion(texto: string): string {
-    if (!this.trained) {
+    if (!this.trained()) {
       throw new Error('El modelo aún no está entrenado');
     }
     const inputVec = this.textToVector(texto, this.vocab);

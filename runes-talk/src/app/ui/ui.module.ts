@@ -7,7 +7,7 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 @NgModule({
   declarations: [
     ToolbarComponent,
-    ThemeSwitcherComponent
+    ThemeSwitcherComponent,
   ],
   imports: [
     CommonModule,
