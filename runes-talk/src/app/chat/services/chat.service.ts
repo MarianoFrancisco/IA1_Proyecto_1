@@ -18,31 +18,24 @@ export class ChatService {
   constructor() { }
 
   public createInComingMessage(text: string): void {
-    const newMessage: Message = { isOutgoing: true, text };
-    this._messagesArray.update((value) => [...value, newMessage]);
+    // Mensaje del usuario
+    const userMessage: Message = { isOutgoing: true, text };
+    this._messagesArray.update((value) => [...value, userMessage]);
+
+    // Predecir intención
     const intencion = this.chatbotService.predecirIntencion(text);
-    const respuesta = this.respuestaPorIntencion(intencion);
+    // Obtener respuesta aleatoria desde el servicio
+    const respuesta = this.chatbotService.getResponseForIntent(intencion);
+
+    // Agregar respuesta del bot tras un pequeño delay (simulación)
     setTimeout(() => {
-      const incomingMessage: Message = { isOutgoing: false, text: respuesta };
-      this._messagesArray.update((value) => [...value, incomingMessage]);
+      const botMessage: Message = { isOutgoing: false, text: respuesta };
+      this._messagesArray.update((value) => [...value, botMessage]);
     }, 2000);
   }
 
   public setIsLoading(value: boolean) {
     this._isLoading.set(value);
-  }
-
-  private respuestaPorIntencion(intencion: string): string {
-    switch (intencion) {
-      case 'saludo':
-        return '¡Hola! ¿En qué puedo ayudarte?';
-      case 'despedida':
-        return '¡Adiós! Que tengas un buen día.';
-      case 'preguntar_hora':
-        return 'No tengo un reloj interno, lo siento.';
-      default:
-        return 'No estoy seguro de cómo responder a eso.';
-    }
   }
 
   public cleanConversation(): void {
