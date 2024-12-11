@@ -8,6 +8,8 @@ import { UiModule } from './ui/ui.module';
 import { PrimeNgModule } from './prime-ng/prime-ng.module';
 import { MessageService } from 'primeng/api';
 import { ChatModule } from './chat/chat.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { ChatModule } from './chat/chat.module';
     AppRoutingModule,
     PrimeNgModule,
     UiModule,
-    ChatModule
+    ChatModule,
+    HttpClientModule
   ],
   providers: [
     MessageService
