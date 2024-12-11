@@ -8,6 +8,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { TooltipModule } from 'primeng/tooltip';
 import { SkeletonModule } from 'primeng/skeleton';
 import { ToastModule } from 'primeng/toast';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 @NgModule({
   declarations: [],
@@ -22,7 +23,8 @@ import { ToastModule } from 'primeng/toast';
     SkeletonModule,
     InputGroupAddonModule,
     InputGroupModule,
-    ToastModule
+    ToastModule,
+    ProgressSpinnerModule
   ]
 })
 export class PrimeNgModule { }
