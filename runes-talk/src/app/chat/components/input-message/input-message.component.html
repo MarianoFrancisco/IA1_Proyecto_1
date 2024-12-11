@@ -2,6 +2,15 @@
     [formGroup]="chatForm"
     (ngSubmit)="sendMessage()"
 >
+    <p-button
+        (onClick)="onClearConversation()"
+        [disabled]="isLoading()"
+        severity="danger"
+        icon="pi pi-trash"
+        rounded="true"
+        tooltipPosition="left"
+        pTooltip="Eliminar Conversacion"
+    />
     <textarea pInputTextarea
         rows="2"
         autoResize="true"

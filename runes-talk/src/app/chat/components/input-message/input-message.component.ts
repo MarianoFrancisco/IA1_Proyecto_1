@@ -32,4 +32,8 @@ export class InputMessageComponent {
     }
   }
 
+  public onClearConversation(): void {
+    this.chatService.cleanConversation();
+  }
+
 }

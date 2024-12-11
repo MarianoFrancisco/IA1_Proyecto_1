@@ -1,0 +1,32 @@
+{
+  "training_data": [
+    {
+      "texto": "hola",
+      "intencion": "saludo"
+    },
+    {
+      "texto": "buenos días",
+      "intencion": "saludo"
+    },
+    {
+      "texto": "qué tal",
+      "intencion": "saludo"
+    },
+    {
+      "texto": "adiós",
+      "intencion": "despedida"
+    },
+    {
+      "texto": "hasta luego",
+      "intencion": "despedida"
+    },
+    {
+      "texto": "qué hora es",
+      "intencion": "preguntar_hora"
+    },
+    {
+      "texto": "me dices la hora",
+      "intencion": "preguntar_hora"
+    }
+  ]
+}
