@@ -1,5 +1,5 @@
 <div class="flex flex-column h-full">
-    @if (trained()) {
+    @if (model()) {
         <div class="my-3 md:px-7 px-2 h-full overflow-y-auto flex flex-column">
             @for (message of messageArray(); track $index) {
                 <chat-message [message]="message" />

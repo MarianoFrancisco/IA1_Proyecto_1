@@ -9,41 +9,41 @@ export class ChatService {
 
   private chatbotService = inject(ChatbotService);
 
-  private _isLoading = signal<boolean>(false);
   private _messagesArray = signal<Message[]>([]);
 
-  public isLoading = computed(() => this._isLoading());
+  public isLoading = signal<boolean>(false);
+  public model = computed(() => this.chatbotService.model());
   public messagesArray = computed(() => this._messagesArray());
 
   constructor() { }
 
   public createInComingMessage(text: string): void {
-    // Mensaje del usuario
     const userMessage: Message = { isOutgoing: true, text };
     this._messagesArray.update((value) => [...value, userMessage]);
-
-    // Predecir intención
-    const intencion = this.chatbotService.predecirIntencion(text);
-    // Obtener respuesta aleatoria desde el servicio
-    const respuesta = this.chatbotService.getResponseForIntent(intencion);
-
-    // Agregar respuesta del bot tras un pequeño delay (simulación)
-    setTimeout(() => {
-      const botMessage: Message = { isOutgoing: false, text: respuesta };
-      this._messagesArray.update((value) => [...value, botMessage]);
-    }, 2000);
+    this.isLoading.set(true);
+    this.chatbotService.predictIntent(text).subscribe({
+      next: (message) => {
+        // setTimeout(() => {
+      //   const botMessage: Message = { isOutgoing: false, text: res };
+      //   this._messagesArray.update((value) => [...value, botMessage]);
+      // }, 2000);
+        const botMessage: Message = { isOutgoing: false, text: message };
+        this._messagesArray.update((value) => [...value, botMessage]);
+      },
+      error: (error) => console.log(error)
+    });
   }
 
-  public setIsLoading(value: boolean) {
-    this._isLoading.set(value);
+  public setIsLoading() {
+    this.isLoading.set(false);
   }
 
   public cleanConversation(): void {
     this._messagesArray.set([]);
   }
 
-  public async initializeChatbot() {
-    await this.chatbotService.trainModel();
+  public initializeChatbot() {
+    return this.chatbotService.loadResources().subscribe();
   }
 
 }
