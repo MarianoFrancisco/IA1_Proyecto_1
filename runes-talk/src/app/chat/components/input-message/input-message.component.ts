@@ -21,11 +21,15 @@ export class InputMessageComponent {
 
   constructor () { }
 
+  onEnterKey(event: Event): void {
+    event.preventDefault();
+    this.sendMessage();
+  }
+
   public sendMessage(): void {
     if (this.chatForm.invalid) {
       this.toastService.showError('Por favor ingresa una pregunta...');
     } else {
-      this.chatService.setIsLoading(true);
       const { inputText } = this.chatForm.value;
       this.chatService.createInComingMessage(inputText);
       this.chatForm.reset();

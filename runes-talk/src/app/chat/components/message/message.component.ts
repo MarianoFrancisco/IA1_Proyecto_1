@@ -32,7 +32,7 @@ export class MessageComponent implements OnInit {
         this.displayText += this.message.text.charAt(i);
         i++;
       } else {
-        this.chatService.setIsLoading(false);
+        this.chatService.setIsLoading();
         clearInterval(interval);
       }
     }, 25)

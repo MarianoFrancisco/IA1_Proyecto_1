@@ -18,6 +18,7 @@
         class="w-full md:w-5 mx-2"
         formControlName="inputText"
         placeholder="Escribe tu pregunta..."
+        (keydown.enter)="onEnterKey($event)"
     ></textarea>
     <p-button
         [disabled]="isLoading()"
@@ -26,6 +27,7 @@
         [severity]="isLoading() ? 'primary' : 'success'"
         [icon]="isLoading() ? 'pi pi-spinner' : 'pi pi-send'"
         type="submit"
+        
         rounded="true"
         tooltipPosition="right"
     />

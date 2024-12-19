@@ -11,15 +11,15 @@ import { ChatbotService } from '../../services/chatbot.service';
 export class ChatLayoutComponent implements OnInit {
 
   private chatService = inject(ChatService);
-  private chatbotService = inject(ChatbotService);
 
-  public trained = computed(() => this.chatbotService.entrenado());
-
+  public isLoading = computed(() => this.chatService.isLoading());
+  public model = computed(() => this.chatService.model());
   public messageArray = computed(() => this.chatService.messagesArray());
 
-  async ngOnInit(): Promise<void> {
-    await this.chatService.initializeChatbot();
-  }
+  constructor() { }
 
+  ngOnInit(): void {
+    this.chatService.initializeChatbot();
+  }
 
 }
