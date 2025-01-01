@@ -1,2 +1,6 @@
 pillow
 pyinstaller
+tensorflow
+scikit-learn
+numpy
+nltk
