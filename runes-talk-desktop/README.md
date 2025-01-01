@@ -18,6 +18,13 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
+
+## Training model:
+
+```bash
+python logic/train_model.py
+```
+
 ## Create an Executable Linux (Optional):
 
 ```bash

@@ -1,0 +1,62 @@
+{
+    "saludo": {
+        "variations": ["hola", "saludos", "hola cómo estás", "buen día", "buenas", "qué tal", "hey", "cómo andas"],
+        "response": "Hola, soy RunesTalk, ¿en qué puedo ayudarte? Tengo conocimientos de Python y JavaScript."
+    },
+    "despedida": {
+        "variations": ["adiós", "hasta luego", "nos vemos", "chao", "bye", "me voy", "cuídate", "gracias"],
+        "response": "Adiós, ¡espero que tengas un gran día!"
+    },
+    "ayuda": {
+        "variations": ["ayuda", "qué puedes hacer", "qué sabes hacer", "cómo me ayudas", "explícame qué haces", "qué haces", "puedes ayudarme"],
+        "response": "Estoy aquí para responder tus dudas sobre programación, especialmente en Python y JavaScript."
+    },
+    "python_definicion": {
+        "variations": ["qué es python", "explícame python", "dame una definición de python", "qué sabes de python", "para qué sirve python"],
+        "response": "Python es un lenguaje de programación de alto nivel, interpretado y con una sintaxis muy legible. Es ideal para desarrollo web, análisis de datos, IA y más."
+    },
+    "python_bucle": {
+        "variations": ["cómo hacer un bucle en python", "ejemplo de bucle en python", "bucle python", "repetir en python", "iterar en python"],
+        "response": "En Python, puedes crear bucles con `for` y `while`. Ejemplo de `for`: `for i in range(5): print(i)`."
+    },
+    "python_funcion": {
+        "variations": ["cómo definir una función en python", "función en python", "crear función python", "ejemplo de función en python"],
+        "response": "En Python, puedes definir funciones usando `def`. Ejemplo: `def suma(a, b): return a + b`."
+    },
+    "python_clases": {
+        "variations": ["cómo definir una clase en python", "clase en python", "ejemplo de clase en python", "programación orientada a objetos en python"],
+        "response": "En Python, defines clases con la palabra clave `class`. Ejemplo:\n```python\nclass Persona:\n    def __init__(self, nombre):\n        self.nombre = nombre\n    def saludar(self):\n        print(f'Hola, soy {self.nombre}')\n```"
+    },
+    "python_errores": {
+        "variations": ["cómo manejar errores en python", "manejo de excepciones en python", "try except en python", "evitar errores en python"],
+        "response": "Puedes manejar errores en Python con `try` y `except`. Ejemplo:\n```python\ntry:\n    x = int('a')\nexcept ValueError as e:\n    print('Ocurrió un error:', e)\n```"
+    },
+    "python_listas": {
+        "variations": ["listas en python", "cómo trabajar con listas en python", "ejemplo de lista en python", "crear lista python"],
+        "response": "En Python, puedes usar listas para almacenar múltiples elementos. Ejemplo:\n```python\nmi_lista = [1, 2, 3]\nmi_lista.append(4)\nprint(mi_lista)\n```"
+    },
+    "javascript_definicion": {
+        "variations": ["qué es javascript", "explícame javascript", "qué sabes de javascript", "definición de javascript", "para qué sirve javascript"],
+        "response": "JavaScript es un lenguaje de programación que se ejecuta principalmente en navegadores web. Es clave para el desarrollo de aplicaciones web interactivas."
+    },
+    "javascript_bucle": {
+        "variations": ["cómo hacer un bucle en javascript", "ejemplo de bucle en javascript", "bucle javascript", "repetir en javascript", "iterar en javascript"],
+        "response": "En JavaScript, puedes usar bucles como `for`, `while` y `for...of`. Ejemplo de `for`:\n```javascript\nfor(let i = 0; i < 5; i++) {\n    console.log(i);\n}\n```"
+    },
+    "javascript_funcion": {
+        "variations": ["cómo crear una función en javascript", "función en javascript", "definir función javascript", "ejemplo de función en javascript"],
+        "response": "En JavaScript, puedes crear funciones usando la palabra clave `function` o como funciones de flecha. Ejemplo:\n```javascript\nconst suma = (a, b) => a + b;\n```"
+    },
+    "javascript_clases": {
+        "variations": ["cómo definir una clase en javascript", "clase en javascript", "ejemplo de clase en javascript", "programación orientada a objetos en javascript"],
+        "response": "En JavaScript, defines clases con la palabra clave `class`. Ejemplo:\n```javascript\nclass Persona {\n    constructor(nombre) {\n        this.nombre = nombre;\n    }\n    saludar() {\n        console.log(`Hola, soy ${this.nombre}`);\n    }\n}\n```"
+    },
+    "javascript_promesas": {
+        "variations": ["qué es una promesa en javascript", "cómo funcionan las promesas en javascript", "ejemplo de promesa en javascript"],
+        "response": "Una promesa en JavaScript es un objeto que representa un valor que estará disponible ahora, en el futuro o nunca. Ejemplo:\n```javascript\nconst promesa = new Promise((resolve, reject) => {\n    setTimeout(() => resolve('Éxito'), 1000);\n});\npromesa.then(console.log);\n```"
+    },
+    "javascript_errores": {
+        "variations": ["cómo manejar errores en javascript", "manejo de errores en javascript", "try catch en javascript"],
+        "response": "Puedes manejar errores en JavaScript con `try` y `catch`. Ejemplo:\n```javascript\ntry {\n    throw new Error('Algo salió mal');\n} catch (error) {\n    console.error(error);\n}\n```"
+    }
+}
