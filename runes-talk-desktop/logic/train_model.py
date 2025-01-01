@@ -75,6 +75,6 @@ def train_model(dataset_path, model_save_path, vectorizer_save_path):
 
 if __name__ == "__main__":
     dataset_path = "dataset/python_javascript.json"
-    model_save_path = "models/python_javascript/model.h5"
-    vectorizer_save_path = "models/python_javascript/vectorizer.pkl"
+    model_save_path = "models/model.h5"
+    vectorizer_save_path = "models/vectorizer.pkl"
     train_model(dataset_path, model_save_path, vectorizer_save_path)

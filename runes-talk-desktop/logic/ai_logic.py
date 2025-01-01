@@ -23,8 +23,8 @@ index_to_response = None
 
 def load_model_and_resources():
     global model, vectorizer, index_to_response
-    model = tf.keras.models.load_model("models/python_javascript/model.h5")
-    with open("models/python_javascript/vectorizer.pkl", "rb") as f:
+    model = tf.keras.models.load_model("models/model.h5")
+    with open("models/vectorizer.pkl", "rb") as f:
         data = pickle.load(f)
         vectorizer = data["vectorizer"]
         index_to_response = data["index_to_response"]
