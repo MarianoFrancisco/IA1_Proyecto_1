@@ -1,7 +1,7 @@
 import tensorflow as tf
 import pickle
 import unicodedata
-from nltk.corpus import stopwords
+# from nltk.corpus import stopwords
 #import nltk
 import numpy as np
 

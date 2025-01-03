@@ -5,7 +5,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 import unicodedata
-from nltk.corpus import stopwords
+# from nltk.corpus import stopwords
 #import nltk
 import pickle
 
