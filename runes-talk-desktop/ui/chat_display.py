@@ -86,7 +86,6 @@ class ChatDisplay:
         self.text_widget.insert(tk.END, "\n", tag_name)
         self.text_widget.config(state=tk.DISABLED)
 
-        # Notify completion
         if on_complete:
             on_complete()
 
