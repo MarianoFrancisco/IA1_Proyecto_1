@@ -26,14 +26,25 @@ class RunesTalkApp:
         if not user_message:
             return
 
-        self.chat_display.add_message(user_message, align="right", color="#ffffff", bubble_color="#3e3e3e")
         self.input_area.clear_input()
+
+        self.input_area.lock_input()
+
+        self.chat_display.add_message(user_message, align="right", color="#ffffff", bubble_color="#3e3e3e")
 
         threading.Thread(target=self.generate_ai_response, args=(user_message,)).start()
 
+
     def generate_ai_response(self, user_message):
         ai_response = AILogic.get_ai_response(user_message)
-        self.chat_display.add_message_slowly(ai_response, align="left", color="#ffffff", bubble_color=None)
+
+        self.chat_display.add_message_slowly(
+            ai_response,
+            align="left",
+            color="#ffffff",
+            bubble_color=None,
+            on_complete=self.input_area.unlock_input
+        )
 
     def clear_messages(self):
         self.chat_display.clear_chat()

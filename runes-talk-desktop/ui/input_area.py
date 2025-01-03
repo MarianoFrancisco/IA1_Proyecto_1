@@ -80,3 +80,14 @@ class InputArea:
 
     def clear_input(self):
         self.input_field.delete(0, tk.END)
+
+    def lock_input(self):
+        self.input_field.config(state=tk.DISABLED)
+        self.send_button.config(state=tk.DISABLED)
+        self.clear_button.config(state=tk.DISABLED)
+
+    def unlock_input(self):
+        self.input_field.config(state=tk.NORMAL)
+        self.send_button.config(state=tk.NORMAL)
+        self.clear_button.config(state=tk.NORMAL)
+        self.input_field.focus()
