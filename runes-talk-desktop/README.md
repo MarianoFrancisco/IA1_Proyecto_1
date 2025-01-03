@@ -28,13 +28,23 @@ python logic/train_model.py
 ## Create an Executable Linux (Optional):
 
 ```bash
-pyinstaller --onefile --windowed --name=RunesTalk --add-data=assets:assets main.py
+pyinstaller --onefile --windowed --name=RunesTalk \
+--add-data="assets:assets" \
+--add-data="dataset:dataset" \
+--add-data="models:models" \
+--add-data="ui:ui" \
+main.py
 ```
 
 
 ## Create an Executable Windows (Optional):
 
 ```bash
-pyinstaller --onefile --windowed --name=RunesTalk --add-data=assets;assets main.py
+pyinstaller --onefile --windowed --name=RunesTalk \
+--add-data="assets:assets" \
+--add-data="dataset:dataset" \
+--add-data="models:models" \
+--add-data="ui:ui" \
+main.py
 ```
 

@@ -81,7 +81,7 @@ class ChatDisplay:
             self.text_widget.insert(tk.END, char, tag_name)
             self.text_widget.update()
             self.text_widget.see(tk.END)
-            time.sleep(0.0125)
+            time.sleep(0.001)
 
         self.text_widget.insert(tk.END, "\n", tag_name)
         self.text_widget.config(state=tk.DISABLED)

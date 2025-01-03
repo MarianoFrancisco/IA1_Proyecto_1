@@ -103,7 +103,12 @@ pip install pyinstaller
 1. Cree un ejecutable con el siguiente comando:
 
 ```bash
-pyinstaller --onefile --windowed --name=RunesTalk --add-data=assets:assets main.py
+pyinstaller --onefile --windowed --name=RunesTalk \
+--add-data="assets:assets" \
+--add-data="dataset:dataset" \
+--add-data="models:models" \
+--add-data="ui:ui" \
+main.py
 ```
 
 2. Verifique que el ejecutable se haya generado en la carpeta `dist`.
@@ -113,7 +118,12 @@ pyinstaller --onefile --windowed --name=RunesTalk --add-data=assets:assets main.
 1. Utilice el siguiente comando para crear un ejecutable:
 
 ```bash
-pyinstaller --onefile --windowed --name=RunesTalk --add-data=assets;assets main.py
+pyinstaller --onefile --windowed --name=RunesTalk \
+--add-data="assets:assets" \
+--add-data="dataset:dataset" \
+--add-data="models:models" \
+--add-data="ui:ui" \
+main.py
 ```
 
 2. Confirme que el ejecutable esté presente en la carpeta `dist`.
