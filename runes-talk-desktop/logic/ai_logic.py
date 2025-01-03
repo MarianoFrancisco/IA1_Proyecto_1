@@ -2,20 +2,20 @@ import tensorflow as tf
 import pickle
 import unicodedata
 from nltk.corpus import stopwords
-import nltk
+#import nltk
 import numpy as np
 
-nltk.download("stopwords")
+#nltk.download("stopwords")
 
-spanish_stopwords = set(stopwords.words("spanish"))
-english_stopwords = set(stopwords.words("english"))
-combined_stopwords = spanish_stopwords.union(english_stopwords)
+#spanish_stopwords = set(stopwords.words("spanish"))
+#english_stopwords = set(stopwords.words("english"))
+#combined_stopwords = spanish_stopwords.union(english_stopwords)
 
 def normalize_text(text):
     text = unicodedata.normalize("NFD", text).encode("ascii", "ignore").decode("utf-8")
     words = text.lower().strip().split()
-    filtered_words = [word for word in words if word not in combined_stopwords]
-    return " ".join(filtered_words)
+    #filtered_words = [word for word in words if word not in combined_stopwords]
+    return " ".join(words)
 
 model = None
 vectorizer = None
