@@ -1,7 +1,6 @@
 import tkinter as tk
 import time
 
-
 class ChatDisplay:
     def __init__(self, parent):
         self.text_widget = tk.Text(
@@ -50,7 +49,7 @@ class ChatDisplay:
         self.text_widget.config(state=tk.DISABLED)
         self.text_widget.see(tk.END)
 
-    def add_message_slowly(self, message, align="left", color="#ffffff", bubble_color=None):
+    def add_message_slowly(self, message, align="left", color="#ffffff", bubble_color=None, on_complete=None):
         self.text_widget.config(state=tk.NORMAL)
         tag_name = f"bubble_{align}"
 
@@ -86,6 +85,10 @@ class ChatDisplay:
 
         self.text_widget.insert(tk.END, "\n", tag_name)
         self.text_widget.config(state=tk.DISABLED)
+
+        # Notify completion
+        if on_complete:
+            on_complete()
 
     def clear_chat(self):
         self.text_widget.config(state=tk.NORMAL)
