@@ -26,14 +26,30 @@ class RunesTalkApp:
         if not user_message:
             return
 
-        self.chat_display.add_message(user_message, align="right", color="#ffffff", bubble_color="#3e3e3e")
+        # Limpia el campo de entrada ANTES de bloquearlo
         self.input_area.clear_input()
 
+        # Bloquea la entrada mientras procesa la respuesta
+        self.input_area.lock_input()
+
+        # Añade el mensaje del usuario al chat
+        self.chat_display.add_message(user_message, align="right", color="#ffffff", bubble_color="#3e3e3e")
+
+        # Inicia un hilo para manejar la respuesta de la IA
         threading.Thread(target=self.generate_ai_response, args=(user_message,)).start()
+
 
     def generate_ai_response(self, user_message):
         ai_response = AILogic.get_ai_response(user_message)
-        self.chat_display.add_message_slowly(ai_response, align="left", color="#ffffff", bubble_color=None)
+
+        # Display response slowly and re-enable input after completion
+        self.chat_display.add_message_slowly(
+            ai_response,
+            align="left",
+            color="#ffffff",
+            bubble_color=None,
+            on_complete=self.input_area.unlock_input
+        )
 
     def clear_messages(self):
         self.chat_display.clear_chat()
