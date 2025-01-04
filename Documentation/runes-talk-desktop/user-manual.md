@@ -1,30 +1,58 @@
-# Manual de Usuario
+# Manual de Usuario - Runes Talk
 
-Bienvenido al manual de usuario para interactuar con **Runes Talk**. A continuación, encontrarás las acciones principales que puedes realizar y una breve descripción de cómo utilizarlas.
+Bienvenido al manual de usuario para interactuar con **Runes Talk**. Esta herramienta permite hacer preguntas en **español** e **inglés** sobre **JavaScript** y **Python**.
+
+---
 
 ## 1. Preguntar a Runes Talk
-Permite al usuario enviar preguntas o mensajes a Runes Talk, ya sea en español o en inglés.
+Permite al usuario realizar preguntas sobre temas de JavaScript y Python. Escribe tu consulta en el cuadro de texto.
 
-![Pregunta](img/preguntar.png)
+![Escribir](img/Escribir.JPG)
+
+---
 
 ## 2. Enviar un Mensaje
-Puedes enviar tu mensaje de dos maneras:
+Puedes enviar tu mensaje de las siguientes maneras:
 - **Presionando la tecla "Enter"**.
-- **Haciendo clic en el símbolo de la flecha**.
+- **Haciendo clic en el símbolo de la flecha azul**.
 
-![Enviar Mensaje](img/enviar.png)
+![Enviar](img/Enviar.JPG)
 
-## 3. Borrar Contenido
-Si deseas eliminar todo el contenido del chat, haz clic en el ícono del **cubo de basura**.
+---
 
-![Borrar Contenido](img/borrar.png)
+## 3. Esperar la Respuesta de Runes Talk
+Cuando envíes un mensaje, debes esperar a que Runes Talk termine de responder antes de enviar otra consulta.
 
-## 4. Salir de la Aplicación
-Para salir de la aplicación, simplemente haz clic en la **X**.
+![Respuesta](img/Respuesta.JPG)
 
-![Salir](img/salir.png)
+---
 
-## 5. Esperar Respuesta de Runes Talk
-Cuando envías un mensaje, espera a que Runes Talk termine de responder antes de enviar otro mensaje.
+## 4. Borrar Contenido
+Si deseas limpiar la ventana del chat, haz clic en el ícono del **cubo de basura rojo**.
 
-![Esperar Respuesta](img/esperar.png)
+![Borrar](img/Borrar.JPG)
+
+---
+
+## 5. Salir de la Aplicación
+Para cerrar la aplicación, haz clic en la **X roja** ubicada en la esquina superior derecha.
+
+![Salir](img/Salir.JPG)
+
+---
+
+## 6. Mensajes de Error
+Si ocurre algún problema, recibirás un mensaje de error. Revisa la consulta y vuelve a intentarlo.
+
+![Error](img/Error.JPG)
+
+---
+
+### Nota:
+Esta es la interfaz principal de **Runes Talk**, diseñada para facilitar tus preguntas y respuestas.
+
+![Interfaz](img/Interfaz.JPG)
+
+---
+
+¡Disfruta usando Runes Talk para aprender y resolver dudas sobre JavaScript y Python!
