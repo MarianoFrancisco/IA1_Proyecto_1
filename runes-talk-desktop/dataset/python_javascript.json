@@ -9890,5 +9890,229 @@
             "How is the search range checked in Interpolation Search?"
         ],
         "response": "```javascript\nwhile (low <= high && arr[low] <= target && target <= arr[high]) {\n```"
-    }
+    },
+    "compilacion": {
+        "variations": [
+            "¿qué es la compilación?",
+            "¿cómo funciona la compilación?",
+            "¿qué hace un compilador?",
+            "¿qué lenguajes se compilan?",
+            "¿cuáles son las etapas de la compilación?",
+            "¿qué diferencias hay entre compilación e interpretación?",
+            "¿qué ejemplos hay de compilación?",
+            "¿qué es el código máquina?",
+            "¿qué beneficios tiene compilar un programa?",
+            "¿cómo optimiza un compilador el código?",
+            "¿qué errores se detectan en la compilación?",
+            "¿qué significa compilar un proyecto?",
+            "¿cómo se configura un compilador?",
+            "¿qué es un archivo binario?",
+            "¿qué ventajas tiene la compilación frente a la interpretación?",
+            "¿qué es el bytecode?",
+            "¿cuáles son los pasos para compilar un programa?",
+            "¿qué es un compilador cruzado?",
+            "¿qué problemas puede haber en la compilación?",
+            "¿qué herramientas se usan para compilar?"
+        ],
+        "response": "La compilación es el proceso de transformar el código fuente escrito en un lenguaje de alto nivel (como C o Java) en un formato que pueda ser entendido y ejecutado directamente por una computadora, como el código máquina o bytecode. Algunos puntos clave:\n\n1. **Fases:** Incluye análisis léxico, sintáctico, semántico, generación de código intermedio, optimización y generación de código final.\n2. **Lenguajes compilados:** C, C++, Rust, Go, entre otros.\n3. **Ventajas:** Mejora el rendimiento del programa y permite detectar errores de sintaxis y semántica antes de la ejecución.\n4. **Herramientas:** Los compiladores como GCC, Clang y MSVC son ejemplos comunes.\n5. **Salida:** El resultado es un archivo ejecutable o binario que puede ejecutarse directamente en el sistema operativo."
+    },
+    "traspilacion": {
+        "variations": [
+            "¿qué es la traspilación?",
+            "¿cómo funciona la traspilación?",
+            "¿qué hace un traspilador?",
+            "¿qué lenguajes se traspilan?",
+            "¿cuáles son ejemplos de traspilación?",
+            "¿qué diferencia hay entre compilación y traspilación?",
+            "¿qué ventajas tiene la traspilación?",
+            "¿qué significa traspilar un código?",
+            "¿cómo se usa un traspilador?",
+            "¿qué es Babel?",
+            "¿qué problemas resuelve la traspilación?",
+            "¿qué es TypeScript y cómo traspila a JavaScript?",
+            "¿cómo se configura un traspilador?",
+            "¿qué herramientas hay para traspilar?",
+            "¿qué es un lenguaje de traspilación?",
+            "¿cómo se traspila código moderno para navegadores antiguos?",
+            "¿qué es ES6 y por qué se traspila?",
+            "¿cómo afecta la traspilación al rendimiento?",
+            "¿cuál es el flujo de trabajo con un traspilador?",
+            "¿qué diferencias hay entre traspilación y transformación de código?"
+        ],
+        "response": "La traspilación es el proceso de convertir el código fuente de un lenguaje de programación o versión a otra similar. Este término se usa comúnmente para describir la conversión de código moderno a una versión más antigua del mismo lenguaje (como ES6 a ES5 en JavaScript). Aspectos clave:\n\n1. **Uso común:** Convertir código de TypeScript a JavaScript o ES6+ a versiones más compatibles con navegadores antiguos.\n2. **Herramientas:** Babel es una de las herramientas más conocidas para traspilación de JavaScript.\n3. **Ventajas:** Permite utilizar características modernas en entornos que aún no las soportan.\n4. **Diferencia con compilación:** La traspilación convierte código entre lenguajes similares, mientras que la compilación lo traduce a un nivel más bajo (como código máquina).\n5. **Configuración:** Generalmente requiere un archivo de configuración (como .babelrc) para definir las reglas de conversión."
+    },
+    "lenguajes_traducidos": {
+        "variations": [
+            "¿qué es un lenguaje traducido?",
+            "¿cómo funcionan los lenguajes traducidos?",
+            "¿qué ejemplos hay de lenguajes traducidos?",
+            "¿qué diferencia hay entre lenguajes compilados y traducidos?",
+            "¿cómo se traduce un lenguaje de programación?",
+            "¿qué beneficios tienen los lenguajes traducidos?",
+            "¿qué es un intérprete en lenguajes traducidos?",
+            "¿cómo se ejecutan los lenguajes traducidos?",
+            "¿qué es el bytecode y cómo se traduce?",
+            "¿qué ejemplos hay de intérpretes famosos?",
+            "¿cuáles son las limitaciones de los lenguajes traducidos?",
+            "¿qué herramientas traducen lenguajes de programación?",
+            "¿qué diferencia hay entre traducción e interpretación de lenguajes?",
+            "¿cómo afecta la traducción al rendimiento?",
+            "¿qué lenguajes traducidos son populares?",
+            "¿cómo se usan lenguajes traducidos en la web?",
+            "¿qué es un runtime en lenguajes traducidos?",
+            "¿qué problemas resuelve un lenguaje traducido?",
+            "¿cómo se optimiza un lenguaje traducido?",
+            "¿cuál es el flujo de trabajo con lenguajes traducidos?"
+        ],
+        "response": "Los lenguajes traducidos son aquellos que no son ejecutados directamente por la máquina, sino que pasan por un proceso de traducción (compilación o interpretación) para convertirse en un formato entendible por el sistema. Ejemplos clave:\n\n1. **Ejemplos:** Python y JavaScript son lenguajes traducidos, ejecutados por intérpretes o entornos de ejecución.\n2. **Funcionamiento:** Pueden utilizar un intérprete (ejecuta el código línea por línea) o generar un bytecode intermedio que es interpretado por una máquina virtual.\n3. **Ventajas:** Son portables y más fáciles de depurar, ya que no requieren recompilación en cada modificación.\n4. **Limitaciones:** Generalmente, son más lentos que los lenguajes compilados debido a la traducción en tiempo de ejecución.\n5. **Usos comunes:** Lenguajes traducidos son ideales para aplicaciones web y scripts debido a su flexibilidad."
+    },
+    "compilation": {
+        "variations": [
+            "What is compilation?",
+            "How does compilation work?",
+            "What does a compiler do?",
+            "Which languages are compiled?",
+            "What are the stages of compilation?",
+            "What are the differences between compilation and interpretation?",
+            "What are some examples of compilation?",
+            "What is machine code?",
+            "What are the benefits of compiling a program?",
+            "How does a compiler optimize code?",
+            "What errors are detected during compilation?",
+            "What does it mean to compile a project?",
+            "How is a compiler configured?",
+            "What is a binary file?",
+            "What are the advantages of compilation over interpretation?",
+            "What is bytecode?",
+            "What are the steps to compile a program?",
+            "What is a cross-compiler?",
+            "What problems can occur during compilation?",
+            "What tools are used for compilation?"
+        ],
+        "response": "Compilation is the process of transforming source code written in a high-level programming language (such as C or Java) into a format that can be directly understood and executed by a computer, such as machine code or bytecode. Key points:\n\n1. **Phases:** Includes lexical analysis, syntax analysis, semantic analysis, intermediate code generation, optimization, and final code generation.\n2. **Compiled languages:** C, C++, Rust, Go, among others.\n3. **Advantages:** Improves program performance and allows syntax and semantic errors to be detected before execution.\n4. **Tools:** Compilers like GCC, Clang, and MSVC are common examples.\n5. **Output:** The result is an executable or binary file that can run directly on the operating system."
+    },
+    "transpilation": {
+        "variations": [
+            "What is transpilation?",
+            "How does transpilation work?",
+            "What does a transpiler do?",
+            "Which languages are transpiled?",
+            "What are some examples of transpilation?",
+            "What is the difference between compilation and transpilation?",
+            "What are the advantages of transpilation?",
+            "What does it mean to transpile code?",
+            "How is a transpiler used?",
+            "What is Babel?",
+            "What problems does transpilation solve?",
+            "What is TypeScript and how does it transpile to JavaScript?",
+            "How is a transpiler configured?",
+            "What tools exist for transpilation?",
+            "What is a transpilation language?",
+            "How is modern code transpiled for older browsers?",
+            "What is ES6, and why is it transpiled?",
+            "How does transpilation affect performance?",
+            "What is the workflow with a transpiler?",
+            "What are the differences between transpilation and code transformation?"
+        ],
+        "response": "Transpilation is the process of converting source code from one programming language or version to another similar one. This term is commonly used to describe the conversion of modern code to an older version of the same language (e.g., ES6 to ES5 in JavaScript). Key aspects:\n\n1. **Common use:** Converting code from TypeScript to JavaScript or ES6+ to versions compatible with older browsers.\n2. **Tools:** Babel is one of the most well-known tools for JavaScript transpilation.\n3. **Advantages:** Allows the use of modern features in environments that do not yet support them.\n4. **Difference from compilation:** Transpilation converts code between similar languages, while compilation translates it to a lower-level format (like machine code).\n5. **Configuration:** Usually requires a configuration file (like `.babelrc`) to define the conversion rules."
+    },
+    "interpreted_languages": {
+        "variations": [
+            "What is an interpreted language?",
+            "How do interpreted languages work?",
+            "What are some examples of interpreted languages?",
+            "What is the difference between compiled and interpreted languages?",
+            "How is a programming language interpreted?",
+            "What are the benefits of interpreted languages?",
+            "What is an interpreter in interpreted languages?",
+            "How are interpreted languages executed?",
+            "What is bytecode, and how is it interpreted?",
+            "What are some examples of famous interpreters?",
+            "What are the limitations of interpreted languages?",
+            "What tools interpret programming languages?",
+            "What is the difference between language interpretation and compilation?",
+            "How does interpretation affect performance?",
+            "What popular interpreted languages exist?",
+            "How are interpreted languages used on the web?",
+            "What is a runtime in interpreted languages?",
+            "What problems do interpreted languages solve?",
+            "How is an interpreted language optimized?",
+            "What is the workflow with interpreted languages?"
+        ],
+        "response": "Interpreted languages are those that are not executed directly by the machine but go through a translation process (compilation or interpretation) to be understood by the system. Key examples:\n\n1. **Examples:** Python and JavaScript are interpreted languages, executed by interpreters or runtime environments.\n2. **How they work:** They may use an interpreter (executing code line by line) or generate intermediate bytecode that is interpreted by a virtual machine.\n3. **Advantages:** They are portable and easier to debug since they don't require recompilation after every change.\n4. **Limitations:** They are generally slower than compiled languages due to runtime translation.\n5. **Common uses:** Interpreted languages are ideal for web applications and scripts due to their flexibility."
+    },
+    "karla_and_manuel": {
+        "variations": [
+            "What is the relationship between Karla and Manuel?",
+            "What relationship do Karla and Manuel have?",
+            "Are Karla and Manuel a couple?",
+            "How are Karla and Manuel related?",
+            "What kind of relationship do Karla and Manuel have?",
+            "Does Manuel love Karla?",
+            "Is Manuel Matias Real?"
+        ],
+        "response": "Karla and Manuel are a couple."
+    },
+    "karla_y_manuel": {
+        "variations": [
+            "¿Cuál es la relación entre Karla y Manuel?",
+            "¿Qué relación tienen Karla y Manuel?",
+            "¿Karla y Manuel son pareja?",
+            "¿Cómo se relacionan Karla y Manuel?",
+            "¿Qué tipo de relación tienen Karla y Manuel?",
+            "¿Manuel quiere a Karla?",
+            "Manuel Matias es Real?"
+        ],
+        "response": "Karla y Manuel son novios."
+    },
+    "que_sabes_hacer": {
+    "variations": [
+      "¿Qué sabes hacer?",
+      "¿Qué puedes hacer?",
+      "¿Qué cosas sabes hacer?",
+      "¿En qué me puedes ayudar?",
+      "¿Qué cosas puedes hacer?",
+      "¿Qué servicios ofreces?",
+      "¿Qué habilidades tienes?",
+      "¿Qué temas manejas?",
+      "¿Qué sabes sobre programación?",
+      "¿Qué puedes hacer en programación?",
+      "¿Qué tipo de ayuda ofreces?",
+      "¿Qué conocimientos tienes?",
+      "¿Qué tipo de cosas puedes hacer?",
+      "¿En qué áreas puedes ayudarme?",
+      "¿Qué podrías enseñarme?",
+      "¿Cuáles son tus habilidades?",
+      "¿Qué temas dominas?",
+      "¿En qué aspectos puedes apoyarme?",
+      "¿Qué me puedes enseñar?",
+      "¿Qué sabes de tecnología?"
+    ],
+    "response": "¡Hola! Soy RunesTalk y estoy aquí para ayudarte. Sé sobre Python y JavaScript, métodos de ordenamiento como Bubble Sort, Quick Sort y más, además de trabajar con datos y APIs. También puedo ayudarte a entender conceptos básicos y avanzados en programación, y hasta hablar de series conocidas si eso te interesa. ¡Pregúntame lo que necesites!"
+  },
+  "what_can_you_do": {
+    "variations": [
+      "What can you do?",
+      "What are you able to do?",
+      "What things can you do?",
+      "How can you help me?",
+      "What services do you offer?",
+      "What skills do you have?",
+      "What topics do you handle?",
+      "What do you know about programming?",
+      "What can you do in programming?",
+      "What kind of help do you offer?",
+      "What knowledge do you have?",
+      "What type of things can you do?",
+      "In what areas can you help me?",
+      "What could you teach me?",
+      "What are your skills?",
+      "What topics do you master?",
+      "In what aspects can you support me?",
+      "What can you teach me?",
+      "What do you know about technology?",
+      "What abilities do you have?"
+    ],
+    "response": "Hello! I'm RunesTalk, and I'm here to help you. I know about Python and JavaScript, sorting algorithms like Bubble Sort, Quick Sort, and more, as well as working with data and APIs. I can also help you understand basic and advanced programming concepts and even chat about popular series if you're interested. Ask me anything you need!"
+  }
 }
